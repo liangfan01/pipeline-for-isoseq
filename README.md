@@ -18,11 +18,11 @@ Mapping and phasing
 
 Doing isoform-level-cluster according to alignments.
 ``` 
-	python collapse_isoforms_by_sam.py -c 0.90 -i 0.90 --input flnc.fastq --fq -s flnc.sort.sam -o all
-```
+```	python collapse_isoforms_by_sam.py -c 0.90 -i 0.90 --input flnc.fastq --fq -s flnc_adjust.sam -o all
+
 Consensus, each cluster generate one consensus sequence.
 ```
-	perl analysis_cluster.pl all.collapsed.group.txt flnc.sort.sam flnc.fastq  > flnc.best.sort.sam
+	perl analysis_cluster.pl all.collapsed.group.txt flnc_adjust.sam flnc.fastq  > flnc.best.sort.sam
 ```
 Doing isoform-level-cluster again.
 ```
